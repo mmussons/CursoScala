@@ -1,0 +1,29 @@
+resolvers += "MyRepo" at "http://nexus.alm.europe.cloudcenter.corp/repository/maven-public"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "3.3.2"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.2"
+
+[info] [launcher] getting org.scala-sbt sbt 1.10.6  (this may take some time)...
+[error] [launcher] xsbt.boot.internal.shaded.coursier.error.ResolutionError$CantDownloadModule: Error downloading org.scala-sbt:sbt:1.10.6
+not found: C:\Users\aaaaaa\.ivy2\local\org.scala-sbt\sbt\1.10.6\ivys\ivy.xml
+download error: Caught javax.net.ssl.SSLHandshakeException ((certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target) while downloading https://repo1.maven.org/maven2/org/scala-sbt/sbt/1.10.6/sbt-1.10.6.pom
+download error: Caught javax.net.ssl.SSLHandshakeException ((certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target) while downloading https://repo.scala-sbt.org/scalasbt/maven-releases/org/scala-sbt/sbt/1.10.6/sbt-1.10.6.pom
+download error: Caught javax.net.ssl.SSLHandshakeException ((certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target) while downloading https://repo.scala-sbt.org/scalasbt/maven-snapshots/org/scala-sbt/sbt/1.10.6/sbt-1.10.6.pom
+download error: Caught javax.net.ssl.SSLHandshakeException ((certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target) while downloading https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/1.10.6/ivys/ivy.xml
+download error: Caught javax.net.ssl.SSLHandshakeException ((certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target) while downloading https://repo.scala-sbt.org/scalasbt/ivy-snapshots/org.scala-sbt/sbt/1.10.6/ivys/ivy.xml
+[error] [launcher] could not retrieve sbt 1.10.6
+
+pom.xml<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.demo.scala</groupId>
+	<artifactId>spark-demo</artifactId>
+	<version>1.0.0</version>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.13</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+	</dependencies>
+</project>

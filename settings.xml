@@ -1,0 +1,49 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ <servers>
+        <server>
+            <id>alm-one</id>
+            <username></username>
+            <password></password>
+        </server>
+    </servers>
+ 
+    <mirrors>
+        <mirror>
+            <id>alm-one</id>
+            <mirrorOf>*</mirrorOf>
+            <name>ALMOne</name>
+            <url>http://nexus.alm.europe.cloudcenter.corp/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+ 
+    <profiles>
+        <profile>
+            <id>alm-one</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <maven-releases>http://nexusmaster.alm.europe.cloudcenter.corp/repository/maven-releases/</maven-releases>
+                <maven-snapshots>http://nexusmaster.alm.europe.cloudcenter.corp/repository/maven-snapshots/</maven-snapshots>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>alm-one-public</id>
+                    <name>ALM One Public Repository</name>
+                    <url>http://nexus.alm.europe.cloudcenter.corp/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+</settings>
